@@ -9,8 +9,8 @@
 <body>
   <div class="container">
     <div class="nav nav-bar">
-    <%= link_to "HOME", welcome_index_path, class: "btn btn-danger btn-lg btn-home" %>
-    <%= link_to "Huh?", welcome_about_path, class: "btn btn-danger btn-lg btn-huh" %>
+    <%= link_to "HOME", root_path, class: "btn btn-danger btn-lg btn-home" %>
+    <%= link_to "Huh?", about_path, class: "btn btn-danger btn-lg btn-huh" %>
   <% if current_user %>
     <%= link_to "Sign out", destroy_user_session_path, class: "btn btn-danger btn-lg btn-out", method: :delete %>
   <% else %>
