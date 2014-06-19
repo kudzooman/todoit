@@ -8,10 +8,10 @@
       </tr>
     </thead>
     <tbody>
-      <%= form_for List.new do |f| %>
+      <%= form_for Todo.new do |f| %>
       <tr>
         <td>
-          <%= f.text_field :todo, placeholder: 'New ToDo' %> 
+          <%= f.text_field :list, placeholder: 'New ToDo' %> 
         </td>
         <td>7</td>
         <td><% check_box_tag(:YesorNo) %><%= label_tag(:YesorNo, "Yes/No") %></td>
