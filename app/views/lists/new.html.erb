@@ -8,13 +8,16 @@
       </tr>
     </thead>
     <tbody>
+      <%= form_for List.new do |f| %>
       <tr>
-        <%= form_for List.new do |form| %>
-        <td><%= form.text_field :todo, placeholder: 'New ToDo' %><%= form.submit 'Save' %> </td>
-        <% end %>
+        <td>
+          <%= f.text_field :todo, placeholder: 'New ToDo' %> 
+        </td>
         <td>7</td>
         <td><% check_box_tag(:YesorNo) %><%= label_tag(:YesorNo, "Yes/No") %></td>
       </tr>
     </tbody>
   </table>
 </div>
+    <%= f.submit 'Save', class: "btn btn-danger btn-lg btn-save" %>
+    <% end %>

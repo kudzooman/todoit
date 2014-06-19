@@ -8,9 +8,9 @@ class ListsController < ApplicationController
   end
 
   def create
-    @list = List.new(list_params)
-    @list.save
-    redirect_to lists_index_path
+    @lists = List.new(list_params)
+    @lists.save
+    redirect_to @lists
   end
 
   def edit

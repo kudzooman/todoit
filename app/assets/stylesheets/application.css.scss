@@ -1,7 +1,7 @@
 @import "bootstrap";
 
 body {
-  background: black;
+  background: #666666;
 }
 
 a {
@@ -20,6 +20,13 @@ a:hover {
 .main {
   border-radius: 1px;
   padding: 50px 50px 20px 150px;
+}
+
+.btn-save {
+  border-radius: 1px;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px; 
+  margin-left: 1px;   
 }
 
 .btn-home {
@@ -75,8 +82,6 @@ a:hover {
 .form {
   margin: 75px 0px 0px 275px;
 }
-
-
 
 .about {
   font-size: 40px;
