@@ -5,6 +5,5 @@ class CreateLists < ActiveRecord::Migration
 
       t.timestamps
     end
-    add_index :lists
   end
 end
