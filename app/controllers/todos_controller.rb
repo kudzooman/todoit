@@ -20,7 +20,7 @@ class TodosController < ApplicationController
   def destroy
     @list = List.find(params[:list_id])
 
-    @todo = @comments.find(params[:id])
+    @todo = @todo.find(params[:id])
 
     if @todo.destroy
       flash[:notice] = "Guess that's done."
@@ -36,7 +36,7 @@ class TodosController < ApplicationController
   private
 
   def todo_params
-    params.require(:todo).permit(:completed, :title, :list, :user, :todo)
+    params.require(:todo).permit(:completed, :item, :list, :user)
   end
 
 

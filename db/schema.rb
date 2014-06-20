@@ -11,16 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140619144010) do
+ActiveRecord::Schema.define(version: 20140620030606) do
 
-  create_table "lists", force: true do |t|
-    t.string   "name"
-    t.integer  "user_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "lists", ["user_id"], name: "index_lists_on_user_id"
+# Could not dump table "lists" because of following NoMethodError
+#   undefined method `[]' for nil:NilClass
 
   create_table "todos", force: true do |t|
     t.string   "item"

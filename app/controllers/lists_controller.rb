@@ -32,7 +32,7 @@ class ListsController < ApplicationController
   private
 
   def list_params
-    params.require(:list).permit(:todo, :YesorNo)
+    params.require(:list).permit(:todo)
   end
   
 end

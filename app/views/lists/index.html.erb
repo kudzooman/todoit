@@ -1,20 +1,5 @@
-<div class="table table-striped table-bordered table-responsive">
-  <table class="table">
-    <thead>
-      <tr>
-        <th>ToDo</th>
-        <th>Days Left</th>
-        <th>Complete</th>
-        <th>Delete</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><%= @lists.todo %></td> 
-        <td>7</td>
-        <td><% check_box_tag, 'Yes/No' %></td>
-        <td><%= link_to "Delete", todo_url_helper(todo), method: :delete, remote: true %></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+<h1>Todo Lists</h1>
+
+<%= @lists.each do |list| %>
+
+<%= link_to list.name, list %>
