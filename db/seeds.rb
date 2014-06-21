@@ -14,7 +14,14 @@ lists = List.all
 )
 end
 
+admin = User.new(
+  name:     'User User',
+  email:    'user@example.com',
+  password: 'helloworld',
+)
+admin.skip_confirmation!
+admin.save
+
 puts "Seed finished"
 puts "#{List.count} lists created"
 puts "#{Todo.count} todos created"
-

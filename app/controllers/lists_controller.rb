@@ -1,18 +1,15 @@
 class ListsController < ApplicationController
 
   def index
-    @list = List.all
-
+    @lists = List.all
   end
 
   def new
-    @list = List.new  
+    @list = List.new
   end
 
   def show
-    #@list = List.find(params[:list_id])
-    @todos = @list
-    @list = current_user.lists.find(params[:list_id])
+    @list = List.find(params[:id])
   end
 
   def create
@@ -38,5 +35,4 @@ class ListsController < ApplicationController
   def list_params
     params.require(:list).permit(:todo)
   end
-  
 end
