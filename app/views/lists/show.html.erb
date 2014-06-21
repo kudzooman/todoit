@@ -9,7 +9,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><%= @lists.todo %></td> 
+        <td><%= @list.todos %></td> 
         <td>7</td>
         <td><%= link_to "Complete", todo_url_helper(todo), method: :delete, remote: true %></td>
       </tr>

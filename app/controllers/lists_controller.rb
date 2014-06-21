@@ -1,15 +1,18 @@
 class ListsController < ApplicationController
+
   def index
     @list = List.all
+
   end
 
   def new
-    @list = List.new user_id: current_user.id
+    @list = List.new  
   end
 
   def show
-    @list = List.find(params[:id])
-    @todos = @list.todos
+    #@list = List.find(params[:list_id])
+    @todos = @list
+    @list = current_user.lists.find(params[:list_id])
   end
 
   def create
@@ -24,6 +27,7 @@ class ListsController < ApplicationController
   end
 
   def edit
+    @list = List.find(params[:id])
   end
 
   def update

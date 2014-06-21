@@ -2,4 +2,6 @@
 
 <%= @lists.each do |list| %>
 
+<%= hidden_field_tag :list_id, @list.id %>
+
 <%= link_to list.name, list %>
