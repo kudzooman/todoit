@@ -9,26 +9,23 @@ class TodosController < ApplicationController
   def create
     @list = List.find(params[:list_id])
 
-   @todo = current_user.todos.build(todo_params)
-   @todo.list = @todo
-   @new_todo.list = Todo.new
+    @todo = @list.todos.build(todo_params)
+    @new_todo = Todo.new
 
-    @todo.save
-    redirect_to @list.todos.item
-    
+    @todo.save!
+
+    respond_with(@todo) do |f|
+      f.html { redirect_to @list }
+    end
   end
-
-    #respond_with(@list.todos) do |f|
-     # f.html { redirect_to @list.todos }
-  #end
 
   def destroy
     @list = List.find(params[:list_id])
 
-    @todo = @todo.find(params[:id])
+    @todo = @list.todos.find(params[:id])
 
     @todo.destroy
-    redirect_to @list.todos.item
+    redirect_to @list
   end
 
   private

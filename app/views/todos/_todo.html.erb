@@ -1,12 +1,5 @@
-<%= content_tag :div, class: 'media', id: "todo-#{todo.id}" do %>
-  <%= link_to '#', class: 'pull-left' do %>
-  <% end %>
-  <div class="media-body">
-    <small>
-      <% if policy(todo).destroy? %>
-        | <%= link_to "Zap!", todo_url_helper(todo), method: :delete, remote: true, class: 'btn btn-danger btn-xs' %>
-      <% end %>
-    </small>
-    <p><%= todo.item %></p>
-  </div>
-<% end %>
+<tr>
+  <td><%= todo.item %>  <%= link_to "Edit", [@list, todo], class: 'btn btn-success btn-sm btn-todo' %></td>
+  <td>7</td>
+  <td><%= link_to "Complete", [@list, todo], method: :delete, class: 'btn btn-success btn-sm btn-todo' %></td>
+</tr>
