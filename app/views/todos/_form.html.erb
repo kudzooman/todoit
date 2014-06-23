@@ -1,0 +1,18 @@
+<%= form_for [list, todo], remote: true do |f| %>
+  <% if todo.errors.any? %>
+    <div class="alert alert-danger"
+      <h4>There are <%= pluralize(todo.errors.count, "error") %>.</h4>
+      <ul>
+        <% todo.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <%= form_group_tag(todo.errors[:body]) do %>
+    <%= f.text_area :item, class: 'form-control', placeholder: "Create Todo here." %>
+  <% end %>
+  <div class="form-group">
+    <%= f.submit "Save", class: 'btn btn-danger btn-lg btn-save' %>
+  </div>
+<% end %>

@@ -10,13 +10,15 @@ class ListsController < ApplicationController
 
   def show
     @list = List.find(params[:id])
+    @todos = @list.todos
+    @todo = Todo.new
   end
 
   def create
     @lists = List.new(list_params)
     if @lists.save
       flash[:notice] = "Great save!"
-      redirect_to root_path
+      redirect_to @lists
     else
       flash[:error] = "Nope."
       render :new

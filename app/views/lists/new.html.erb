@@ -1,23 +1,10 @@
-<div class="table table-striped table-bordered table-responsive">
-  <table class="table">
-    <thead>
-      <tr>
-        <th>ToDo</th>
-        <th>Days Left</th>
-        <th>Complete</th>
-      </tr>
-    </thead>
-    <tbody>
-      <%= form_for Todo.new do |f| %>
-      <tr>
-        <td>
-          <%= f.text_field :list, placeholder: 'New ToDo' %> 
-        </td>
-        <td>7</td>
-        <td><% check_box_tag(:YesorNo) %><%= label_tag(:YesorNo, "Yes/No") %></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-    <%= f.submit 'Save', class: "btn btn-danger btn-lg btn-save" %>
-    <% end %>
+<h1>Create New List</h1>
+
+  <div class="col-md-8">
+    <%= form_for @list do |f| %>
+      <div class="form-group">
+        <%= f.text_field :name, class: 'form-control', placeholder: "Enter list name" %>
+      </div>
+      <%= f.submit "Save", class: 'btn btn-danger btn-lg btn-save' %>
+      <% end %>
+  </div>
