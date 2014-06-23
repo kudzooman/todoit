@@ -13,31 +13,22 @@ class TodosController < ApplicationController
    @todo.list = @todo
    @new_todo.list = Todo.new
 
-    if @todo.save
-      flash[:notice] = "Todo saved"
-    else
-      flash[:error] = "Nope"
-    end
+    @todo.save
+    redirect_to @list.todos.item
+    
   end
 
-    respond_with(@list.todos) do |f|
-      f.html { redirect_to @list.todos }
-  end
+    #respond_with(@list.todos) do |f|
+     # f.html { redirect_to @list.todos }
+  #end
 
   def destroy
     @list = List.find(params[:list_id])
 
     @todo = @todo.find(params[:id])
 
-    if @todo.destroy
-      flash[:notice] = "Guess that's done"
-    else
-      flash[:error] = "Nope"
-    end
-
-    respond_with(@todo) do |f|
-      f.html { redirect_to @list.todos }
-    end
+    @todo.destroy
+    redirect_to @list.todos.item
   end
 
   private

@@ -30,11 +30,26 @@ class ListsController < ApplicationController
   end
 
   def update
+    @list = List.find(params[:id])
+    @list.update_attributes(list_params)
+    redirect_to lists_path
+  end
+
+  def destroy
+    @lists = List.find(params[:id])
+    name = @list
+    if @lists.destroy
+      flash[:notice] = "\"#{name}\" is gone forever."
+    else
+      flash[:error] = "Something went wrong. Try again."
+      render :show
+    end
+    redirect_to @lists
   end
 
   private
 
   def list_params
-    params.require(:list).permit(:todo)
+    params.require(:list).permit(:todo, :name)
   end
 end
