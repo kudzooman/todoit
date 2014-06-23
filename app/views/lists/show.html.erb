@@ -11,14 +11,8 @@
         <th>Complete</th>
       </tr>
     </thead>
-    <tbody>
-      <% @list.todos.each do |todo| %>
-        <tr>
-          <td><%= todo.item %>  <%= link_to "Edit", @todo, class: 'btn btn-success btn-sm btn-todo' %></td>
-          <td>7</td>
-          <td><%= link_to "Complete", @todo, method: :delete, class: 'btn btn-success btn-sm btn-todo' %></td>
-        </tr>
-      <% end %>
+    <tbody class="js-todos">
+      <%= render @list.todos %>
     </tbody>
   </table>
   <%= render partial: 'todos/form', locals: { list: @list, todo: @todo } %>
