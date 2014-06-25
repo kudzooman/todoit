@@ -1,3 +1,11 @@
+every 7.days do
+  rake db:task delete_items: :environment do
+    Item.where("created_at <= ?", Time.now - 7.days).destroy_all
+  end
+end
+
+
+
 # Use this file to easily define all of your cron jobs.
 #
 # It's helpful, but not entirely necessary to understand cron before proceeding.

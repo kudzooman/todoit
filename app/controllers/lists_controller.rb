@@ -1,11 +1,14 @@
 class ListsController < ApplicationController
 
+  before_filter :authenticate_user!
+
   def index
     @lists = List.all
   end
 
   def new
     @list = List.new
+    authorize @list
   end
 
   def show
@@ -27,11 +30,13 @@ class ListsController < ApplicationController
 
   def edit
     @list = List.find(params[:id])
+    authorize @list
   end
 
   def update
     @list = List.find(params[:id])
     @list.update_attributes(list_params)
+    authorize @list
     redirect_to lists_path
   end
 
@@ -44,6 +49,7 @@ class ListsController < ApplicationController
       flash[:error] = "Something went wrong. Try again."
       render :show
     end
+    authorize @list
     redirect_to @lists
   end
 

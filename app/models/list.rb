@@ -4,4 +4,7 @@ class List < ActiveRecord::Base
 
   has_many :todos, dependent: :destroy
 
+  validates :name, length: { minimum: 1 }, presence: true
+  validates :user, presence: true
+
 end

@@ -5,11 +5,7 @@
       <div class="form-group">
         <%= f.text_field :name, class: 'form-control', placeholder: "Enter list name" %>
       </div>
-      <%= form_for @list.todos.item do |f| %>
-      <div class="form-group">
-        <%= f.text_field :item, class: 'form-control', placeholder: "Enter todo" %>
-      </div>
+
       <%= f.submit "Save", class: 'btn btn-danger btn-lg btn-save' %>
-      <% end %>
       <% end %>
   </div>

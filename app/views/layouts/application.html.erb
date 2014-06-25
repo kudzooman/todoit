@@ -8,16 +8,14 @@
   </head>
   <body>
     <div class="container">
-      <div class="nav nav-bar">
-        <%= link_to "HOME", root_path, class: "btn btn-danger btn-lg btn-home" %>
-        <%= link_to "Huh?", about_path, class: "btn btn-danger btn-lg btn-huh" %>
+      
+        <%= link_to "HOME", root_path, class: "btn btn-danger btn-lg btn-home pull-left" %>
+        
         <% if current_user %>
-          <%= link_to "Sign out", destroy_user_session_path, class: "btn btn-danger btn-lg btn-out", method: :delete %>
-        <% else %>
-          <%= link_to "Sign In", new_user_session_path, class: "btn btn-danger btn-lg btn-in" %>
-          <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-danger btn-lg btn-up" %>
+          <%= link_to "Sign out", destroy_user_session_path, class: "btn btn-danger btn-lg btn-out pull-right", method: :delete %>
+        
         <% end %>
-      </div>
+    
 
       <%= yield %>
 

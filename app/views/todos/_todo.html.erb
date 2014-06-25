@@ -1,5 +1,7 @@
 <tr>
   <td><%= todo.item %>
-  <td>7</td>
+  <td><%= (Date.today - todo.created_at.to_date).to_i %></td>
+  <% if policy(@list).destroy? %>
   <td><%= link_to "Complete", [@list, todo], method: :delete, class: 'btn btn-success btn-sm btn-todo' %></td>
+  <% end %>
 </tr>

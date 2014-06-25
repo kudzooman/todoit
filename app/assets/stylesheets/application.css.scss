@@ -1,6 +1,9 @@
 @import "bootstrap";
 
 h1 {
+margin-top: 50px;
+margin-right: 175px;
+text-align: center;
   color: white;
 }
 
@@ -9,7 +12,7 @@ body {
 }
 
 a {
-  color: black;
+  color: white;
 }
 
 a:hover {
@@ -22,76 +25,82 @@ a:hover {
 }
 
 .main {
-  border-radius: 1px;
+  border-radius: 20px;
   padding: 50px 50px 20px 150px;
 }
 
 .btn-todo {
-  border-radius: 1px;
-  -webkit-border-radius: 1px;
-  -moz-border-radius: 1px; 
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px; 
   margin-left: 1px;   
 }
 
 .btn-save {
-  border-radius: 1px;
-  -webkit-border-radius: 1px;
-  -moz-border-radius: 1px; 
-  margin-left: 1px;   
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px; 
+  margin-left: 3px;
+  margin-bottom: 5px;   
 }
 
 .btn-home {
-  border-radius: 1px;
-  -webkit-border-radius: 1px;
-  -moz-border-radius: 1px; 
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px; 
+  margin-top: 5px;
   margin-left: 150px;
   margin-right: 50px;    
 }
 
 .btn-huh {
-  border-radius: 1px;
-  -webkit-border-radius: 1px;
-  -moz-border-radius: 1px;  
-  margin-left: 70px;
-  margin-right: 50px;   
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px; 
+  margin-top: 5px; 
+  margin-left: 50px;
+  margin-right: 170px;   
 }
 
 .btn-in {
-  border-radius: 1px;
-  -webkit-border-radius: 1px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
   -moz-border-radius: 1px; 
   margin-left: 60px;
   margin-right: 50px;    
 }
 
 .btn-up {
-  border-radius: 1px;
-  -webkit-border-radius: 1px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
   -moz-border-radius: 1px;
   margin-left: 60px;
   margin-right: 50px;    
 }
 
 .btn-out {
-  border-radius: 1px;
-  -webkit-border-radius: 1px;
-  -moz-border-radius: 1px;
-  margin-left: 100px;
-  margin-right: 50px;     
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  margin-top: 5px;
+  margin-left: 70px;
+  margin-right: 250px;   
 }
 
 .btn-xlarge {
-  border-radius: 1px;
+  position: absolute;
+  top: 10%;
+  border-radius: 105px;
   padding: 68px 98px;
   font-size: 82px; //change this to your desired size
   line-height: normal;
-  -webkit-border-radius: 1px;
-  -moz-border-radius: 1px;    
-  margin: 0px 50px 0px 90px; 
+  -webkit-border-radius: 105px;
+  -moz-border-radius: 105px;    
+  margin: 30px 50px 0px 90px; 
 }
 
 .form {
-  margin: 75px 0px 0px 275px;
+  margin: 300px 0px 0px 225px;
 }
 
 .about {
@@ -116,19 +125,27 @@ tbody {
 }
 
 tr {
+  background: #333333;
   margin: 30px 100px 30px 30px
 }
 
 th {
+  background: #E6E6E6;
+  font-size: 20px;
   margin: 30px 100px 30px 30px
 }
 
 td {
+  color: white;
+  font-size: 15px;
   margin: 30px 100px 30px 30px
 }
 
 .about {
   color: white;
+  margin: 300px 80px 0px 5px;
 }
+
+
 
 

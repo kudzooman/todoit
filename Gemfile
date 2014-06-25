@@ -49,6 +49,8 @@ gem 'whenever', '~> 0.9.2', :require => false
 gem 'faker'
 
 gem 'stack_rescue', '~> 0.0.1'
+
+gem 'pundit'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

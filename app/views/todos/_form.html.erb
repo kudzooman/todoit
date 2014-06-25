@@ -1,3 +1,4 @@
+<% if policy(@list).create? %>
 <%= form_for [list, todo], remote: true do |f| %>
   <% if todo.errors.any? %>
     <div class="alert alert-danger"
@@ -16,3 +17,4 @@
     <%= f.submit "Save Todo", class: 'btn btn-danger btn-lg btn-save' %>
   <% end %>
   </div>
+  <% end %>
