@@ -3,7 +3,7 @@ class ListsController < ApplicationController
   before_filter :authenticate_user!
 
   def index
-    @lists = List.all
+    @lists = policy_scope(List)
   end
 
   def new
@@ -18,10 +18,10 @@ class ListsController < ApplicationController
   end
 
   def create
-    @lists = List.new(list_params)
-    if @lists.save
+    @list = current_user.lists.create(list_params)
+    if @list.save
       flash[:notice] = "Great save!"
-      redirect_to @lists
+      redirect_to @list
     else
       flash[:error] = "Nope."
       render :new
