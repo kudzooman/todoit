@@ -51,6 +51,10 @@ gem 'faker'
 gem 'stack_rescue', '~> 0.0.1'
 
 gem 'pundit'
+
+gem 'newrelic_rpm'
+
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
